@@ -1,0 +1,18 @@
+
+
+  <div *ngIf="params.colDef.field == 'make'" class="dropdown">
+      <button  (click)="downArrowClick($event)"  class="dropbtn"><a href="#">Dropdown (click me)</a></button>
+     <!-- 
+        Disable mouse leave so we can debug and see the hiding issue
+        (mouseleave)="mouseleave($event)" -->
+      <div class="mydropdown" [class.dropdown-content]="showMenu" [class.dropdown-hide]="!showMenu" style="z-index:9999"> 
+          <a class="mydropdown"  href="#home">Home New</a>
+          <a class="mydropdown"  href="#about">About</a>
+          <a class="mydropdown" href="#contact">Contact</a>
+      </div> 
+  </div>
+
+  <div *ngIf="params.colDef.field == 'model'" class="tooltip">{{params.value}}
+    <span class="tooltiptext">This cuts off, I<br/>have more to say</span>
+</div>
+
